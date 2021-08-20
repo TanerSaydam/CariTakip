@@ -194,6 +194,7 @@ namespace CariTakip
             this.gridView1.GridControl = this.gC1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
             // 
             // colID
@@ -243,6 +244,8 @@ namespace CariTakip
             this.colBAKIYE.MinWidth = 30;
             this.colBAKIYE.Name = "colBAKIYE";
             this.colBAKIYE.OptionsColumn.FixedWidth = true;
+            this.colBAKIYE.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BAKIYE", "Toplam: {0:c2}")});
             this.colBAKIYE.Visible = true;
             this.colBAKIYE.VisibleIndex = 1;
             this.colBAKIYE.Width = 112;

@@ -49,10 +49,9 @@ namespace CariTakip
 
                 if (MessageBox.Show("Kaydetmek istiyor musunuz?", "Kaydet", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    OleDbCommand kmt = new OleDbCommand("insert into TBLCARI(ADISOYADI,BORC,ALACAK,DURUM) values(@ADISOYADI,@BORC,@ALACAK,@DURUM)", baglanti);
+                    OleDbCommand kmt = new OleDbCommand("insert into TBLCARI(ADISOYADI,BAKIYE,DURUM) values(@ADISOYADI,@BAKIYE,@DURUM)", baglanti);
                     kmt.Parameters.AddWithValue("@ADISOYADI", TxtAdıSoyadı.Text);
-                    kmt.Parameters.AddWithValue("@BORC", 0);
-                    kmt.Parameters.AddWithValue("@ALACAK", 0);
+                    kmt.Parameters.AddWithValue("@BAKIYE", 0);                    
                     if (cBDurum.Checked == true)
                     {
                         kmt.Parameters.AddWithValue("@DURUM", true);
